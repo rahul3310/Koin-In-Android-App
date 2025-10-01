@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -22,7 +23,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -44,12 +44,12 @@ class MainActivity : ComponentActivity() {
                                 Text(
                                     text = "Koin In Android App",
                                     fontSize = 24.sp,
-                                    color = Color.Black,
-                                    fontWeight = FontWeight.SemiBold
+                                    color = MaterialTheme.colorScheme.onPrimary,
+                                    fontWeight = FontWeight.Normal
                                 )
                             },
                             colors = TopAppBarDefaults.topAppBarColors(
-                                containerColor = Color.Gray
+                                containerColor = MaterialTheme.colorScheme.primary
                             )
                         )
                     },
