@@ -10,6 +10,7 @@ class MainApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
+        //To start Koin
         startKoin {
             modules(networkModule, appModule)
         }

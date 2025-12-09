@@ -2,7 +2,6 @@ package com.koinInAndroidApp.koinDI
 
 import com.koinInAndroidApp.api.ApiService
 import com.koinInAndroidApp.interceptor.ApiKeyInterceptor
-import com.koinInAndroidApp.repository.ImageRepository
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
@@ -34,7 +33,6 @@ val networkModule = module {
             .readTimeout(30, TimeUnit.SECONDS)
             .build()
     }
-
     //Retrofit
     single {
         Retrofit.Builder()
@@ -43,13 +41,8 @@ val networkModule = module {
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
-
     //ApiService
     single {
         get<Retrofit>().create(ApiService::class.java)
     }
-
-
-
-
 }

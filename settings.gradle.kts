@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Koin In Android(App"
 include(":app")
+include(":designPattern")
